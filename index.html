@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#071b35"/>
+  <title>Mission ACC Live</title>
+  <link rel="manifest" href="manifest.json"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <span class="pill">LIVE CURRENT AFFAIRS • ACC TRACKER • MADE WITH LOVE</span>
+      <h1>Mission ACC ❤️✈️</h1>
+      <p>
+        A live mobile command center for ACC preparation — current affairs, defence updates,
+        quiz practice, bookmarks, and preparation progress.
+      </p>
+      <button onclick="loadNews()">Refresh Live Affairs</button>
+    </section>
+
+    <section class="love">
+      <h2>For My Future Officer</h2>
+      <p>
+        I made this for you because your dream matters to me. Open this whenever you study,
+        revise, or need motivation. I am always proud of you. ❤️
+      </p>
+      <b>Discipline today, Commission tomorrow.</b>
+    </section>
+
+    <section class="stats">
+      <div><h2 id="newsCount">0</h2><p>Live Updates</p></div>
+      <div><h2 id="bookCount">0</h2><p>Bookmarks</p></div>
+      <div><h2 id="doneCount">0</h2><p>Topics Done</p></div>
+      <div><h2 id="updatedAt">--</h2><p>Updated</p></div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Daily Live Current Affairs</h2>
+      <div class="filters">
+        <button onclick="setFilter('All')">All</button>
+        <button onclick="setFilter('Defence')">Defence</button>
+        <button onclick="setFilter('National')">National</button>
+        <button onclick="setFilter('International')">International</button>
+        <button onclick="setFilter('Science')">Science</button>
+        <button onclick="setFilter('Economy')">Economy</button>
+        <button onclick="setFilter('Sports')">Sports</button>
+      </div>
+      <p id="loader">Loading live current affairs...</p>
+      <div id="newsGrid" class="grid"></div>
+    </section>
+
+    <section>
+      <h2 class="section-title">ACC Preparation Tracker</h2>
+      <div id="trackerGrid" class="grid"></div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Daily Quiz From Live Affairs</h2>
+      <div id="quizBox" class="card"></div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Bookmarks</h2>
+      <div id="bookmarkGrid" class="grid"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

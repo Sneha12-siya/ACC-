@@ -1,0 +1,11 @@
+{
+  "name": "mission-acc-live-app",
+  "version": "1.0.0",
+  "description": "Mobile live current affairs ACC tracker app for Vercel",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}
